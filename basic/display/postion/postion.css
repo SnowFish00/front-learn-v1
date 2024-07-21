@@ -1,0 +1,28 @@
+.static{
+    position: static;
+}
+
+/* 这个relative相当于给absolute当父元素 既设置这个元素让绝对认准它 */
+.relative{
+    position: relative;
+    height: 300px;
+    background-color: violet;
+}
+
+.absolute{
+    position: absolute;
+    /* 将元素放在右下角 */
+    /* right: 0;
+    bottom: 0; */
+
+    /* 完美居中 移动到中心 再中心重合*/
+    /* 移动到容器中心 */
+    top: 50%;
+    left: 50%;
+    /* 将自身中心与容器中心重合 */
+    transform: translate(-50%, -50%);
+}
+
+.fixed{
+    position: fixed;
+}

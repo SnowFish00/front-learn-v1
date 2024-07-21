@@ -1,0 +1,92 @@
+/* 元素选择 */
+h4{
+    color: red;
+}
+/* 类选择 */
+.classSelector{
+    color: green;
+}
+/* ID选择 */
+#idselector{
+    color: blue;
+}
+
+.purple{
+    color: purple;
+}
+.orange{
+    color: orange;
+}
+.yellow{
+    color: yellow;
+}
+
+/* 层级选择 */
+.parent .child{
+    color: grey;
+}
+
+/* 或者 */
+.parent{
+    .child{
+         color: grey;
+    }
+}
+
+/* 多类样式 */
+.violet{
+    color: violet;
+}
+.text-lg{
+    font-size: 24px;
+}
+.text-center{
+    text-align: center;
+}
+
+/* 文本颜色 */
+.rgb{
+    color: rgb(235, 70, 224);
+}
+
+.hex{
+    color: #eb46e0;
+}
+
+/* 背景颜色 */
+.background-color{
+    background-color: lightblue;
+}
+/* 边框颜色 */
+.border-color{
+    border: 3px solid lightgrey;
+}
+
+/* 透明度 */
+.text-opacity{
+    color: rgba(235, 70, 224, 0.3);
+}
+/* opacity 也是透明度包含从父到所有子元素的透明度 不能精确调节文本 背景 边框 */
+
+/* 字体 */
+/* 字体加载 */
+@font-face {
+    font-family: "free";
+    src: url("./free.ttf");
+}
+
+/* 依次尝试加载字体 */
+.text-1{
+    font-family: free, sans-serif;
+}
+/* 字号、行高 */
+.text-2{
+    font-size:24px ;
+    line-height: 32px;
+}
+/* 字体粗细、效果(斜体、下划线等)*/
+.text-3{
+    font-weight: 200;
+    font-style: italic;
+    text-decoration: line-through;
+}

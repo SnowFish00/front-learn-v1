@@ -1,0 +1,53 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.left{
+    position: fixed;
+    float: left;
+    background-color: rgb(41, 120, 224);
+    width: 15%;
+    height: 30%;
+    max-height: 300px;
+}
+
+.right{
+    position: fixed;
+    left: 80%;
+    float: right;
+    background-color: rgb(38, 185, 119);
+    width: 20%;
+    height: 100%;
+    max-height: 500px;
+}
+
+.content{
+    background-color: rgba(239, 231, 110, 0.5);
+    margin-left: 15%;
+    margin-right: 20%;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+.A{
+    float: left;
+    width: 30%;
+    height: 30%;
+}
+
+.B{
+    float: right;
+    width: 30%;
+    height: 30%;
+}

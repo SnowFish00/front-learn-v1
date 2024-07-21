@@ -1,0 +1,46 @@
+.left, .middle , .right{
+    background-color: yellow;
+}
+
+.left{
+    float: left;
+    width: 33.3%;
+   
+}
+
+.middle{
+    float: left;
+    width: 33.3%;
+}
+
+.right{
+    float: left;
+    width: 20%;
+}
+
+/* 清除浮动 */
+/* 方法一 clearfix */
+/* .clear{
+    clear: both;
+} */
+
+/* 方法二 伪类 */
+/* .container::after{
+    content: "";
+    clear: both;
+    display: block;
+} */
+
+/* 方法三 设置为BFC形式 */
+/* .container{
+    display: flow-root;
+} */
+
+/* 或者 */
+.container{
+    overflow: hidden;
+}
+
+
+
+

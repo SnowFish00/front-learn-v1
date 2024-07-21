@@ -1,0 +1,39 @@
+/* 空格选择 */
+/* 选取space下的所有div */
+.space div{
+    min-height: 20px;
+    border: 2px solid black;
+    margin: 4px;
+    background-color: aqua;
+}
+
+/* > 选择最外面一层  */
+.space > div{
+    background-color: rgb(25, 165, 241);
+}
+
+/* + 选择同一层紧挨着的 元素 */
+.space + div{
+    background-color: lightpink;
+}
+
+/* ~ 选取同一层之后的所有元素 */
+.space2 ~ div{
+    background-color: lightgreen;
+}
+
+/* * 匹配所有  div 下面的p标签也被匹配了*/
+.space2 ~ *{
+    background-color: lightgreen;
+}
+
+/* []属性选择 可以使用正则 */
+a {
+    display: block;
+    font-size: 32px;
+    padding: 3px;
+}
+
+a[href="https://www.apple.com"]{
+    color: red;
+}

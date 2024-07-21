@@ -1,0 +1,23 @@
+/* 弹性布局 */
+.flex{
+    display: flex;
+    /* 默认水平方向 竖向为cloum */
+    flex-direction: row;
+}
+
+.gap{
+    /* flex元素间初始分隔 不像原来一样挨着了彼此远离10px */
+    gap: 10px;
+}
+
+.item{
+    /* flex的元素占据可调 */
+    /* 每个元素占据为1 平分 row空间 */
+    flex: 1;
+}
+
+.item-2{
+    /* flex的元素占据可调 */
+    /* item2 占据为2 占据 row 2/n 剩下元素瓜分n-2/n */
+    flex: 2;
+}

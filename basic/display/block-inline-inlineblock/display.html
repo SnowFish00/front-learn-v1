@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./display.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- display -->
+     <div class="block">块元素</div>
+     <!-- block -->
+     <div>独占一行</div>
+     <p>独占一行</p>
+     <h1>独占一行</h1>
+     <!-- 举例转化inline为block 其他转换同理 -->
+     <span class="block">转化为独占一行</span>
+     <!-- inline (与其他相同内联元素一行)-->
+     <div class="inline">内联元素</div>
+     <span>不会独占一行</span>
+     <a href="">不会独占一行</a>
+     <!-- inline-block (类似内联元素 但是可以使用block元素属性如 宽 高等)-->
+     <div class="inline-block">内联块元素</div>
+     <!-- none -->
+     <div class="none">隐藏元素</div>
+
+     <!-- margin重叠 -->
+     <div class="blue"></div>
+     <!--  用一个细长的其他元素可将重叠分开  -->
+     <div class="separator"></div>
+     <div class="yellow"></div>
+
+     <div class="box-sizing">codingStartup</div>
+     <div class="with-padding">codingStartup</div>
+</body>
+</html>

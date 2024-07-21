@@ -1,0 +1,67 @@
+.block{
+    /* 将元素转化为块元素 */
+    display: block;
+    background-color: aquamarine;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    /* 让行内元素在一行内水平对齐 */
+    text-align: center;
+
+}
+
+.inline{
+    /* 将元素转化为行内元素 */
+    display: inline;
+    background-color: aqua;
+}
+
+.inline-block{
+    /* 将元素转化为行内块元素 */
+    display: inline-block;
+}
+
+.none{
+    /* 元素隐藏 */
+    display: none;
+}
+
+.blue,.yellow{
+    height: 100px;
+    margin: 100px;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.yellow{
+    background-color: yellow;
+    /* 重叠冲突时程序会取最大距离 */
+    margin-top: 200px;
+}
+
+/* 分割线 */
+.separator{
+    height: 1px;
+    background-color: black;
+}
+
+/* 默认为 content-box 宽度默认为 body也叫content的宽度 */
+.box-sizing{
+    background-color: blue;
+    color: white;
+    width: 300px;
+}
+
+/* 虽然属性设置的和box-sizing一致 但是padding 20px 导致填充左右各20px 共多了40px */
+/* 添加border-box属性可以规范回宽度 哪怕加上border也能规范回来 */
+.with-padding{
+    background-color: blue;
+    color: white;
+    width: 300px;
+    padding: 20px;
+    border: 3px solid black;
+    box-sizing: border-box;
+
+}

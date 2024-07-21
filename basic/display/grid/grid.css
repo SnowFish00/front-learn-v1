@@ -1,0 +1,16 @@
+.grid{
+    display: grid;
+    /* 指定前三行 高100px 200px 300px */
+    /* grid-template-rows: 100px 200px 300px; */
+    /* 指定两列 宽占比1:2 */
+    /* grid-template-columns: 1fr 2fr; */
+
+    /* 也可以自适应 */
+    /* 四个一重复 */
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows:100px ;
+    grid-auto-columns: 1fr;
+    /* 添加元素间距 */
+    gap: 12px;
+
+}

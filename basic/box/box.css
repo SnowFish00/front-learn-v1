@@ -1,0 +1,22 @@
+/* 边距、边框、填充 均有上下左右之分 */
+.box-model{
+    /* 右边距10px 上填充 8px */
+    /* margin-right: 10px; 
+    padding-top: 8px; */
+
+    /* 边距 上下6px 左右12px居中 */
+    /* margin: 6px 12px; */
+
+    /* 上下左右全选 上右下左 */
+    margin: 12px 8px 24px 16px;
+
+    /* 边框 */
+    border: 2px solid rgba(233, 70, 244, 0.5);
+
+    /*本体*/
+    width: 80px;
+    height: 120px;
+    color: white;
+    background-color: lightblue;
+    padding: 16px;
+}

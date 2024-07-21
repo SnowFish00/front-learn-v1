@@ -1,0 +1,13 @@
+/* 弹性布局 */
+.flex{
+    display: flex;
+    /* 如果弹性方向为row 则主轴为横轴 */
+    height: 120px;
+    background-color: violet;
+    /* 主轴方向对齐 默认为flex-start*/
+    /* 还有space-between 将元素均匀挤压到两侧平分空白 spacearound...  */
+    justify-content: center;
+    /* 交叉轴方向对齐 默认为flex-start*/
+    align-items: center;
+
+}
