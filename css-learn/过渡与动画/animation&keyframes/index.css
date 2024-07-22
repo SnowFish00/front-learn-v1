@@ -1,0 +1,64 @@
+/* 关键帧 
+name关键帧列表名字 keyframe-selector关键帧选择器 css-styles 关键帧样式*/
+/* @keyframes name{
+    keyframe-selector {
+        css-style;
+    }
+    ...
+} */
+
+.loading {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 50px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #09f;
+    border-radius: 50%;
+    margin: 0 auto;
+    /* 此外还能设置 fill-mode  none forwards动画结束停留在末尾
+    backwards 从动画开始前使用元素第一帧的样子
+    both 二者兼具*/
+    animation: spin 1s ease 1s infinite;
+    /* 暂停播放 */
+    animation-play-state: paused;
+}
+
+.loading:hover{
+    /* hover引起播放 */
+    animation-play-state: running;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.updown {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    background: #09f;
+    border-radius: 50%;
+    margin: 0 auto;
+    /* 1s是开始时延 imfinte代表无限播放次数 */
+    /* 有了alternate 就可以正向放完反向自动播放 减少了关键帧定义
+     还有alternate-reverse 先反后正 */
+    /* 还有normal 正常 和 reverse反向 */
+    animation: bounce 1s linear 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0%);
+        /* 可以对当前帧到下一帧时间设置 */
+        /* animation-timing-function: cubic-bezier(0.8,0,1,1); */
+    }
+    100% {
+        transform: translateY(-120%);
+    } 
+}

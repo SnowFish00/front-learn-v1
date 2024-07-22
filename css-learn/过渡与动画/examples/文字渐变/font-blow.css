@@ -1,0 +1,20 @@
+.color-blow{
+    text-align: center;
+    font-size: 10em;
+    font-weight: bold;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e,#23a6d5,#23d5ab);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% 400%;
+    background-position: 50% 100%;
+    animation: fade 2.5s ease infinite alternate;
+}
+/* 本质上是渐变色的背景移动 */
+@keyframes fade{
+    from{
+        background-position: 0% 50%;
+    }
+    to{
+        background-position: 100% 50%;
+    }
+}

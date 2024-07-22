@@ -1,0 +1,56 @@
+.A{
+    background-color: #b7472a;
+    color: #fff2e5;
+}
+
+#in{
+    font-size: 3em;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+/* 伪类 拼接 */
+/* 数字超出范围用户焦点在input */
+#in:out-of-range:focus{
+    background-color: gold;
+}
+
+/* 伪元素示例 */
+/* 超出范围 则在h2 后面添加结果提示 伪元素不允许拼接 */
+#in:out-of-range + h2::after{content: "超出范围";}
+
+/* 伪类可以在选择符前后方 伪元素只能在后方 */
+/* 伪类依赖dom 伪元素不依赖 */
+.B{
+    background-color: rgb(5, 156, 105);
+}
+
+.B input{
+    margin: auto 10px 10px;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+.B input::after {
+    content: "已勾选";
+    color: #ffe75e;
+    font-weight: bold;
+    font-size: 30px;
+    display: none;
+    width: 150px;
+    height: 50px;
+    margin-left: 100px;
+}
+/* 伪元素不产生新对象 伪类产生 */
+.B input:checked::after{display: block;}
+
+.C li:nth-child(2n+1) {
+    color: rgb(85, 0, 255);
+}
+
+.C p::first-letter{color: #ff0000;}
+
+/* 伪类 有很多 状态类 结构类 表单类 语言类 ... */
+/* 伪元素较少 ::before ::after ::selection ::placeholder ::backdrop ... */

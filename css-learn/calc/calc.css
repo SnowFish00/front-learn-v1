@@ -1,0 +1,55 @@
+.v img{
+    width: 500px;
+    height: 300px;
+    /* 使用padding居中 */
+    padding-top: calc(50vh - 300px/2);
+    padding-left: calc(50vw - 500px/2);
+}
+
+.c img{
+    /* 这么设置可以 使得图片外边距永远不变 拉伸一下页面你就知道了 */
+    width: calc(100% - 500px);
+    height: 300px;
+    /* 使用padding居中 */
+    padding-top: calc(50vh - 300px/2);
+    padding-left: calc(50vw - 500px/2);
+}
+
+.rl{
+    width:100vw ;
+    height: 50vh;
+}
+.left{
+    background-color: #c56183;
+    float: left;
+    width: 30%;
+    height: 100%;
+    margin-right: 10px;
+}
+.right{
+    background-color: #b6f994;
+    float: right;
+    /* 这么写可以让margin 增加而不会是的右div 串行 */
+    width: calc(70% - 10px);
+    height: 100%;
+}
+
+.z {
+    /*
+    这段 CSS 代码为一个元素设置了一个多重渐变背景。首先，定义了一个 CSS 变量 --t，
+    其值为 20deg，用于计算渐变角度。元素的最小高度和宽度被设置为 500 像素。
+    背景由多个 linear-gradient 组成，每个渐变的角度通过 calc(var(--t) * n) 计算得出，
+    其中 n 是 1 到 6 的倍数。这些渐变从不透明的颜色（如 rgba(255, 0, 0, 0.8)）逐渐变为透明，并在 70.71% 位置完全透明。
+    最终，多重渐变叠加在一起，形成一个复杂且多彩的背景效果。
+    */
+    min-height: 500px;
+    min-width: 500px;
+    --t: 100deg;
+    background: 
+        linear-gradient(calc(var(--t) * 1), rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+        linear-gradient(calc(var(--t) * 2), rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+        linear-gradient(calc(var(--t) * 3), rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%),
+        linear-gradient(calc(var(--t) * 4), rgba(255, 255, 0, 0.8), rgba(255, 255, 0, 0) 70.71%),
+        linear-gradient(calc(var(--t) * 5), rgba(0, 255, 255, 0.8), rgba(0, 255, 255, 0) 70.71%),
+        linear-gradient(calc(var(--t) * 6), rgba(255, 0, 255, 0.8), rgba(255, 0, 255, 0) 70.71%);
+}

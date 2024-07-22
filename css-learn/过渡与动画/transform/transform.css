@@ -1,0 +1,88 @@
+.A {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: aqua;
+    /* 使用transition 对 transform 移动时间设置为1s */
+    transition: transform 1.0s ease; /* 添加动画效果 */
+}
+
+/* hover 鼠标放置效果 */
+.A:hover {
+    /* 水平和竖直方向位移 */
+    transform: translate(50%, 50%);
+}
+
+.B {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: aqua;
+    transition: transform 1.0s ease;
+    /* 可以修改旋转点 */
+    transform-origin: top right;
+}
+
+.B:hover {
+    /* 正数顺顺时针负数逆时针 */
+    transform: rotate(-30deg);
+}
+
+.C {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: aqua;
+    transition: transform 1.0s ease; /* 添加动画效果 */
+}
+
+/* hover 鼠标放置效果 */
+.C:hover {
+    /* 一个参数代表放大倍数 两个参数代表宽和高分别缩放 */
+    transform:scale(0.6) ;
+    /* 可以设置缩放点 */
+    transform-origin: top left;
+}
+
+.D {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: aqua;
+    transition: transform 1.0s ease; /* 添加动画效果 */
+}
+
+/* hover 鼠标放置效果 */
+.D:hover {
+    /* 可传递两个方向 */
+    transform:skew(30deg,10deg) ;
+      /* 可以设置倾斜点 */
+    transform-origin: top left;
+}
+
+.E {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: aqua;
+    transition: transform 1.0s ease; /* 添加动画效果 */
+}
+
+/* hover 鼠标放置效果 */
+.E:hover {
+    /* 接受a、b、c、d、e、f参数  ad缩放 bc倾斜 ef平移 */
+    /* 一般是软件导出 不需要我们写 */
+    transform: matrix(0.5, 0.5, 0.3, 0.5, 30, 20);
+}
+
+/* .z {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: aqua;
+    transition: transform 1.0s ease; 
+}
+
+.z:hover {
+    transform: ;
+} */

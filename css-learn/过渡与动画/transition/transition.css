@@ -1,0 +1,56 @@
+.A {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: aqua;
+    /* 参数 过度属性 过渡时长 缓动函数 开始延迟时间 */
+    /* 贝塞尔缓动函数 分为 ease ease-in ease-out ease-in-out */
+    transition: transform 2s ease-out 1s, background-color 2s ease 3s;  
+}
+
+.A:hover {
+    background-color: rgb(50, 220, 120);
+    transform: skew(30deg,10deg);
+}
+
+.B {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: aqua;
+    /* 参数 过度属性 过渡时长 缓动函数 开始延迟时间 */
+    /* 线性缓动函数 根据给定点折线速度变化 */
+    transition: transform 2s linear(0,0.25,1) 1s, background-color 2s linear 3s;  
+}
+
+.B:hover {
+    background-color: rgb(50, 220, 120);
+    transform: skew(30deg,10deg);
+}
+
+.C {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: aqua;
+    /* 参数 过度属性 过渡时长 缓动函数 开始延迟时间 */
+    /* 阶跃缓动函数 分布过渡 */
+    transition: transform 2s steps(2,end) 1s, background-color 2s steps(5,end) 3s;  
+}
+
+.C:hover {
+    background-color: rgb(50, 220, 120);
+    transform: skew(30deg,10deg);
+}
+
+/* .z {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: aqua;
+    transition: transform 1.0s ease; 
+}
+
+.z:hover {
+    transform: ;
+} */
