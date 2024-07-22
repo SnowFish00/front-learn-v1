@@ -1,0 +1,61 @@
+h1{
+    text-align: center;
+    background-color: cadetblue;
+}
+
+.nav{
+    text-align: center;
+    background-color: aqua;
+    padding: 20px;
+    /* 设置粘性布局 */
+    position: sticky;
+    /* 阈值 它会参考距离它最近而且能够滚动的元素 比如在这里就是body*/
+    top: 0;
+    /* bottom: 0;
+    left: 0;
+    right: 0; */
+    /* 防止被标题覆盖 加z轴*/
+    z-index: 10;
+
+}
+
+.heng{
+    margin-top: 30px;
+    text-align: center;
+    background-color: blanchedalmond;
+    padding: 50px;
+}
+
+/* 可固定区域 如果超过滚动可固定区域则不再固定 */
+.space-2{
+
+}
+.title{
+    margin-top: 30px;
+    text-align: center;
+    background-color: rgb(150, 210, 85);
+    padding: 10px;
+    position: sticky;
+    top: 60px;
+}
+
+.content{
+    margin-top: 30px;
+    text-align: center;
+    background-color: rgb(40, 235, 225);
+    padding: 300px;
+}
+
+.bottom{
+    margin-top: 30px;
+    text-align: center;
+    background-color: rgb(150, 210, 85);
+    padding: 20px;
+}
+
+.space-3{
+    /* 降低图层优先级显示 */
+    z-index: -1;
+    position: sticky;
+    bottom: 0px;
+}
