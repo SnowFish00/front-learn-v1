@@ -1,5 +1,15 @@
 // 编译指令 tsc part.ts --lib es2015,dom
 //ts 配置文件tsc --init
+
+// 逐个暴露 举例
+/*
+export const myVar = 42;
+
+export function myFunction() {
+    return 'Hello, world!';
+}
+*/
+
 //1.函数重载
 function sum(a: number, b: number): number
 function sum(a: string, b: string): string
@@ -174,3 +184,11 @@ class GenericClass<T> {
 let genericClass = new GenericClass<string>("hello")
 genericClass.setValue("world")
 console.log(genericClass.getValue())
+
+let anumberClass = new GenericClass<number>(3)
+anumberClass.setValue(5)
+console.log(anumberClass.getValue())
+
+//暴露为模块 注意貌似写了export 再编译就是module了 所以先编译再export 保证这个在变成module前js可用
+// 一次性导出所有内容
+export { sum, Animal, Dog, AnimalClass, AB, User, AnimalAbstract, DogAbstract, Shape, Rectangle, GenericClass }

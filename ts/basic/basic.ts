@@ -1,4 +1,4 @@
-// 编译指令 tsc basic.ts --lib es2015,dom
+// 编译指令 tsc basic.ts --lib es2015,dom --target es2015
 
 // 1.类型推断
 // 已经声明的类型不可以被其他类型赋值
@@ -17,6 +17,8 @@ let numberArr = [1, 2, 3]
 //既告诉编译器变量是number 且 一定存在
 const result = numberArr.find(item => item > 2) as number
 result * 5
+//也可以断言标签 
+//比如 const aLink = document.getElementById('link') as HTMLAnchorElement
 
 //4.类型
 let v1: string = "abc"
@@ -28,6 +30,25 @@ let un: undefined = undefined
 let v4: string | null = null
 //可能在1 2 3 中的任意一个
 let V5: 1 | 2 | 3 = 2
+//map类型
+let myMap = new Map();
+myMap.set("key", "value")
+const isHave = myMap.has('key')
+const valueC = myMap.get('key')
+//删除 key value
+// const removed = myMap.delete('key')
+//map 迭代
+for (const [key, value] of myMap.entries()) {
+    console.log(key, value);
+}
+//或者
+myMap.forEach((value, key) => {
+    console.log(key, value);
+});
+
+
+// typeof 根据已有变量获取类型
+let v6: typeof v1 = "number"
 
 //数组
 //两种定义方法

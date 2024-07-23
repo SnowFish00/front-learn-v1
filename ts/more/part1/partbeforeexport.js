@@ -1,4 +1,3 @@
-"use strict";
 // 编译指令 tsc part.ts --lib es2015,dom
 //ts 配置文件tsc --init
 var __extends = (this && this.__extends) || (function () {
@@ -16,9 +15,6 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.GenericClass = exports.Rectangle = exports.DogAbstract = exports.AnimalAbstract = exports.User = exports.AB = exports.AnimalClass = void 0;
-exports.sum = sum;
 function sum(a, b) {
     if (typeof a === "number" && typeof b === "number") {
         return a + b;
@@ -68,7 +64,6 @@ var AnimalClass = /** @class */ (function () {
     AnimalClass.do = "k";
     return AnimalClass;
 }());
-exports.AnimalClass = AnimalClass;
 var animalClass = new AnimalClass("animalClass", "black", 30);
 animalClass.eat();
 console.log(animalClass.wweight(50));
@@ -83,7 +78,6 @@ var AB = /** @class */ (function (_super) {
     }
     return AB;
 }(AnimalClass));
-exports.AB = AB;
 var ab = new AB("ab", "blue", 20);
 ab.eat();
 console.log(ab.rweight());
@@ -109,7 +103,6 @@ var User = /** @class */ (function () {
     });
     return User;
 }());
-exports.User = User;
 var user = new User();
 user.value = "abc123456";
 console.log(user.value);
@@ -123,7 +116,6 @@ var AnimalAbstract = /** @class */ (function () {
     };
     return AnimalAbstract;
 }());
-exports.AnimalAbstract = AnimalAbstract;
 var DogAbstract = /** @class */ (function (_super) {
     __extends(DogAbstract, _super);
     function DogAbstract(name) {
@@ -136,7 +128,6 @@ var DogAbstract = /** @class */ (function (_super) {
     };
     return DogAbstract;
 }(AnimalAbstract));
-exports.DogAbstract = DogAbstract;
 var dogAbstract = new DogAbstract("dog");
 dogAbstract.eat();
 dogAbstract.run();
@@ -150,7 +141,6 @@ var Rectangle = /** @class */ (function () {
     };
     return Rectangle;
 }());
-exports.Rectangle = Rectangle;
 var rectangle = new Rectangle(5, 10);
 console.log(rectangle.area());
 //7.泛型类
@@ -166,10 +156,12 @@ var GenericClass = /** @class */ (function () {
     };
     return GenericClass;
 }());
-exports.GenericClass = GenericClass;
 var genericClass = new GenericClass("hello");
 genericClass.setValue("world");
 console.log(genericClass.getValue());
 var anumberClass = new GenericClass(3);
 anumberClass.setValue(5);
 console.log(anumberClass.getValue());
+//暴露为模块 注意貌似写了export 再编译就是module了 所以先编译再export 保证这个在变成module前js可用
+// 一次性导出所有内容
+// export { sum, Animal, Dog, AnimalClass, AB, User, AnimalAbstract, DogAbstract, Shape, Rectangle, GenericClass }
