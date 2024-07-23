@@ -1,16 +1,15 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-//编译 tsc part2.ts --lib es2015,dom --target es2015
-var p1 = require("../part1/part");
+//有import的es指令 所以用es6 
+//tsc --module ES6 --target ES2015 --lib ES2015,DOM part.ts
+import * as p1 from "../part1/part";
 // 使用导入的内容 举例
 console.log(p1.sum(1, 2));
 console.log(p1.sum("hello", "world"));
-var dog = {
+let dog = {
     name: "dog",
-    eat: function () {
+    eat() {
         console.log("dog eat");
     },
-    bark: function () {
+    bark() {
         console.log("dog bark");
     }
 };

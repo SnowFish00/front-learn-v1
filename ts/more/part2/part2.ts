@@ -1,4 +1,5 @@
-//编译 tsc part2.ts --lib es2015,dom --target es2015
+//有import的es指令 所以用es6 
+//tsc --module ES6 --target ES2015 --lib ES2015,DOM part.ts
 import * as p1 from "../part1/part"
 
 // 使用导入的内容 举例

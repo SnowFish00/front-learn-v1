@@ -1,4 +1,5 @@
-// 编译指令 tsc part.ts --lib es2015,dom
+// 若无 es6语法 如引进export 则编译指令 tsc part.ts --lib es2015,dom
+//否则 tsc --module ES6 --target ES2015 --lib ES2015,DOM part.ts
 //ts 配置文件tsc --init
 
 // 逐个暴露 举例
